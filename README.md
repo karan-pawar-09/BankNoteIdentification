@@ -2,6 +2,9 @@
 
 Indian Banknote Identification using Deep Learnin
 
+## Note
+We have not yet added sufficient new notes of 20, 100, 500 and others, so it may not give correct prediction for those notes
+
 ## Work Done
 
 Deep Learning Models for the classification of Indian currency notes using transfer learning were explored. The importance of transfer learning in feature extraction was emphasized, as it played a crucial role in achieving high accuracy in the model. Experiments were conducted using three pre-trained models - VGG19, ResNet50, and Inception V3, and they were tested with different hyperparameters such as epoch, batch size, and learning rate. Among these models, the ResNet50 model achieved the highest accuracy for the dataset. It was then deployed using Flask on ec2 linux server and used in an Android app using the Flutter framework.
