@@ -1,16 +1,13 @@
 # banknoteid
 
-A new Flutter project.
+Indian Banknote Identification using Deep Learnin
 
-## Getting Started
+## Work Done
 
-This project is a starting point for a Flutter application.
+Deep Learning Models for the classification of Indian currency notes using transfer learning were explored. The importance of transfer learning in feature extraction was emphasized, as it played a crucial role in achieving high accuracy in the model. Experiments were conducted using three pre-trained models - VGG19, ResNet50, and Inception V3, and they were tested with different hyperparameters such as epoch, batch size, and learning rate. Among these models, the ResNet50 model achieved the highest accuracy for the dataset. It was then deployed using Flask and used in an Android app using the Flutter framework.
 
-A few resources to get you started if this is your first Flutter project:
+##screenshot
+<img width="458" alt="app_screenshot" src="https://github.com/karan-pawar-09/BankNoteIdentification/assets/70064211/5af0dce5-cd2d-4fcf-8a39-18042ec202d2">
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+##Download Link
+https://github.com/karan-pawar-09/BankNoteIdentification/releases/download/v1.0.0/banknoteid.apk
