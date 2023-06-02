@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_native_image/flutter_native_image.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:http/http.dart' as http;
@@ -36,20 +37,20 @@ class HomePageState extends State<HomePage> {
   }
 
   Future<void> detectImage(File image) async {
-    print("Start Detect Image");
+    // print("Start Detect Image");
     try {
       final url = Uri.parse('http://3.26.215.6/predict');
       final request = http.MultipartRequest('POST', url);
       request.files.add(await http.MultipartFile.fromPath('file', image.path));
       final response = await request.send();
-      print(response.statusCode);
+      // print(response.statusCode);
       if (response.statusCode == 200) {
         final responseBody = await response.stream.bytesToString();
         final responseJson = json.decode(responseBody);
         final className = responseJson['class_name'];
 
-        print(className);
-
+        // print(className);
+        //
         setState(() {
           _output = int.tryParse(className.toString());
           loading = false;
@@ -63,20 +64,30 @@ class HomePageState extends State<HomePage> {
   }
 
   void pickImage(ImageSource source) async {
-    print("Start");
+
     final image = await _imagePicker.pickImage(source: source);
+    // File img_ = File(image!.path);
+    // int? sz;
+    // sz = img_.statSync().size;
+    //print("Original size: $sz");
     if (image == null) {
       return null;
     } else {
+      ImageProperties properties = await FlutterNativeImage.getImageProperties(image.path);
+      File compressedFile = await FlutterNativeImage.compressImage(image.path, quality: 80,
+          targetWidth: 600,
+          targetHeight: (properties.height! * 600 / properties.width!.toInt()).round());
       setState(() {
-        _image = File(image.path);
+        _image = File(compressedFile.path);
       });
     }
-    print("End");
+    // sz = _image?.statSync().size;
+    //print("Reduced size: $sz");
     detectImage(_image!);
   }
 
-  
+
+
   @override
   void dispose() {
     super.dispose();
