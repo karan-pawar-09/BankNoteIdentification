@@ -13,7 +13,7 @@ Deep Learning Models for the classification of Indian currency notes using trans
 <img width="250" alt="app_screenshot" src="https://github.com/karan-pawar-09/BankNoteIdentification/assets/70064211/5af0dce5-cd2d-4fcf-8a39-18042ec202d2">
 
 ## Android App Download Link
-https://github.com/karan-pawar-09/BankNoteIdentification/releases/download/v1.0.0/banknoteid.apk
+https://github.com/karan-pawar-09/BankNoteIdentification/releases/download/v1.1.0/banknoteid.apk
 
 ## Flask backend github repo link
 https://github.com/karan-pawar-09/Flask-Backend-For-BankNote-Identification
