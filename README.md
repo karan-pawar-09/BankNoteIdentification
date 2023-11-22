@@ -18,6 +18,9 @@ https://github.com/karan-pawar-09/BankNoteIdentification/releases/download/v1.1.
 ## Flask backend github repo link
 https://github.com/karan-pawar-09/Flask-Backend-For-BankNote-Identification
 
+## Model Code
+https://colab.research.google.com/drive/1avp-iSzpe_AiGj3UAuUpEwMBoqJltOon?authuser=1#scrollTo=yeSVc2I47mxd
+
 ## BackEnd deployment 
 Deployment Steps:
 
